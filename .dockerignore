@@ -1,0 +1,53 @@
+# Git
+.git
+.gitignore
+*.md
+
+# Documentation
+docs/
+*.md
+README.md
+
+# Logs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.env.local
+.env.*.local
+
+# Tests
+tests/
+*_test.py
+test_*.py
+
+# Scripts (not needed in container)
+scripts/
+*.sh
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Azure
+.azure/
+azure.yaml
+
+# Infrastructure
+infra/
+
+# Keep only essential files for the specific service

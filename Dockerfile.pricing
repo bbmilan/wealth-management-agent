@@ -1,0 +1,34 @@
+# Use Python 3.12 slim image with explicit platform for Azure Container Apps
+FROM --platform=linux/amd64 python:3.12-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies including curl for health checks
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first for better caching
+COPY requirements_sk.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements_sk.txt
+
+# Copy the pricing agent
+COPY agents/pricing/ ./agents/pricing/
+COPY .env.azure.example .env
+
+# Expose port
+EXPOSE 8011
+
+# Set environment variables
+ENV PYTHONPATH=/app
+ENV PRICING_AGENT_PORT=8011
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD curl -f http://localhost:8011/health || exit 1
+
+# Run the pricing agent
+CMD ["python", "-m", "uvicorn", "agents.pricing.main:app", "--host", "0.0.0.0", "--port", "8011"]

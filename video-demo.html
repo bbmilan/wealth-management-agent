@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Portfolio Management System - Demo Video</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            color: #c9d1d9;
+            min-height: 100vh;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .header {
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+        
+        h1 {
+            color: #58a6ff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(88, 166, 255, 0.3);
+        }
+        
+        .subtitle {
+            color: #7d8590;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+        
+        .video-section {
+            background: #161b22;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid #30363d;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+        }
+        
+        .video-controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: #238636;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .btn:hover {
+            background: #2ea043;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 160, 67, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #21262d;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+        }
+        
+        .btn-secondary:hover {
+            background: #30363d;
+            border-color: #484f58;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(48, 54, 61, 0.4);
+        }
+        
+        .features {
+            background: #0d1117;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid #21262d;
+            text-align: left;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features h3 {
+            color: #58a6ff;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 12px;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+        }
+        
+        .feature:hover {
+            background: #161b22;
+        }
+        
+        .feature-icon {
+            font-size: 20px;
+            margin-right: 12px;
+            margin-top: 2px;
+            min-width: 24px;
+        }
+        
+        .feature-text {
+            flex: 1;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        .navigation {
+            background: #161b22;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid #30363d;
+        }
+        
+        .navigation h3 {
+            color: #f0f6fc;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .video-container iframe {
+                height: 300px;
+            }
+            
+            .video-section,
+            .features,
+            .navigation {
+                padding: 20px;
+                margin: 20px 0;
+            }
+            
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+            
+            .video-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .video-controls {
+                gap: 10px;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Portfolio Management System</h1>
+            <p class="subtitle">Watch the system demonstration - Real-time AI portfolio management in action</p>
+        </div>
+        
+        <div class="video-section">
+            <div class="video-container">
+                <iframe 
+                    src="https://drive.google.com/file/d/1u5mdwQZfSOvmHRgKpmbjZtqJtP5XYebk/preview" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="video-controls">
+                <a href="https://drive.google.com/file/d/1u5mdwQZfSOvmHRgKpmbjZtqJtP5XYebk/view?usp=drive_link" 
+                   target="_blank" 
+                   class="btn btn-secondary">
+                    🔗 Open in Google Drive
+                </a>
+            </div>
+        </div>
+        
+        <div class="features">
+            <h3>🎯 The video demonstrates:</h3>
+            <div class="feature">
+                <span class="feature-icon">🤖</span>
+                <span class="feature-text">Real-time AI conversations with sophisticated portfolio analysis</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">📊</span>
+                <span class="feature-text">Live price updates with green/red flash animations</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">⚖️</span>
+                <span class="feature-text">AI-powered rebalancing with institutional-grade recommendations</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🎯</span>
+                <span class="feature-text">Professional dashboard with real-time portfolio visualization</span>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <h3>🚀 Explore More</h3>
+            <div class="nav-links">
+                <a href="https://github.com/bbmilan/wealth-management-agent" class="btn">
+                    📋 View Source Code
+                </a>
+                <a href="https://github.com/bbmilan/wealth-management-agent/blob/main/docs/README.md" class="btn btn-secondary">
+                    📚 Documentation
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
